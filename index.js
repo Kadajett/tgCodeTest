@@ -133,7 +133,8 @@ class Garden {
         
         this.history.push(`Eats ${this.layout[location.y - 1][location.x - 1]}`);
         this.layout[location.y][location.x] = 0;
-        this.eatNext(this.findNext())
+        this.center = this.findNext();
+        this.eatNext(this.center)
         return this;
     }
 
